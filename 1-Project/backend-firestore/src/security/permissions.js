@@ -7,48 +7,30 @@ class Permissions {
       iamEdit: {
         id: 'iamEdit',
         allowedRoles: [
-          roles.owner,
-          roles.iamSecurityReviewer,
-          roles.editor,
+          roles.manager, 
+          roles.employee,
         ],
         allowedStorageFolders: ['user'],
       },
       iamCreate: {
         id: 'iamCreate',
-        allowedRoles: [
-          roles.owner,
-          roles.iamSecurityReviewer,
-          roles.editor,
-        ],
+        allowedRoles: [roles.manager, roles.employee],
       },
       iamImport: {
         id: 'iamImport',
         allowedRoles: [
-          roles.owner,
+          roles.manager,
           roles.iamSecurityReviewer,
           roles.editor,
         ],
       },
       iamRead: {
         id: 'iamRead',
-        allowedRoles: [
-          roles.owner,
-          roles.iamSecurityReviewer,
-          roles.editor,
-          roles.viewer,
-        ],
+        allowedRoles: [roles.manager],
       },
       iamUserAutocomplete: {
         id: 'iamUserAutocomplete',
         allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.viewer,
-
-          roles.petEditor,
-          roles.petViewer,
-          roles.bookingEditor,
-          roles.bookingViewer,
         ],
       },
       auditLogRead: {
