@@ -30,6 +30,7 @@ class AuthUserWriter {
       );
     }
 
+    // first user is going to be the manager
     const isFirstUser =
       (await UserRepository.count()) === 0;
 
@@ -40,7 +41,7 @@ class AuthUserWriter {
           authUser.email.split('@')[0],
         email: authUser.email,
         authenticationUid: authUser.uid,
-        roles: isFirstUser ? [Roles.values.owner] : [],
+        roles: isFirstUser ? [Roles.values.manager] : [],
       },
     );
 
